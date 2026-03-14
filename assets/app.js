@@ -484,7 +484,7 @@
 
   function renderRelated(){
     related.innerHTML="";
-    (cfg.related||[]).forEach(item=>{
+    (cfg.related||[]).slice(0, 7).forEach(item=>{
       const href=item.category==="home" ? "/" : "/"+item.category+"/"+item.slug+"/";
       related.appendChild(el("a",{href},item.title));
     });
